@@ -9,29 +9,37 @@
 using namespace std;
 int main ()
 {
-    double sales, commissionRate, commission;
+    double sales;
+    double rate;
+    double commission;
+    
     cout <<"Enter the value of sales: " << endl;
     cin >> sales;
     
-    if(sales<10000 && sales>0 )
+    // check for error input
+    if (sales<0)
     {
-        commissionRate = 10/100;
+        cout << "The sales value cannot be negative" << endl;
+        return 1;
     }
-    else if (sales>= 10000 && sales <15000)
+    
+    // check sales value and calculate commission rate
+    
+    if (sales >15000)
     {
-        commissionRate = 15/100;
+        rate = 0.20;
     }
-    else if (sales>=15000)
+    else if (sales>= 10000)
     {
-        commissionRate = 20/100;
+        rate = 0.15;
     }
     else
     {
-        cout << "you have not entered a valid sales value. please re-enter the sales value: " << endl;
-        cin >> sales;
+        rate = 0.10;
     }
     
-    commission = sales*commissionRate;
+    commission = sales * rate;
+    cout <<"The comission rate is: " << rate * 100 << "%" << endl;
     cout << "The commission for the sales value is: "<< commission << endl;
     return 0;
     }
