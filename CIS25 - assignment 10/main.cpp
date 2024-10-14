@@ -9,6 +9,7 @@
 using namespace std;
 int main ()
 {
+    // initializing variables as doubles
     double sales;
     double rate;
     double commission;
@@ -23,7 +24,7 @@ int main ()
         return 1;
     }
     
-    // check sales value and calculate commission rate
+    // check sales value and calculates commission rate accordingly, using if/else loop
     
     if (sales >15000)
     {
@@ -38,9 +39,9 @@ int main ()
         rate = 0.10;
     }
     
-    commission = sales * rate;
-    cout <<"The comission rate is: " << rate * 100 << "%" << endl;
-    cout << "The commission for the sales value is: "<< commission << endl;
+    commission = sales * rate; // the commission is sales * rate
+    cout <<"The comission rate is: " << rate * 100 << "%" << endl; // prints commission rate
+    cout << "The commission for the sales value is: "<< commission << endl; // prints commission
     return 0;
     }
 
