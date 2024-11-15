@@ -10,11 +10,11 @@ using namespace std;
 int main ()
 {
     // initializing variables as doubles
-    double sales;
+    int sales;
     double rate;
     double commission;
     
-    cout <<"Enter the value of sales: " << endl;
+    cout << "Enter the value of sales: " << endl;
     cin >> sales;
     
     // check for error input
@@ -26,17 +26,17 @@ int main ()
     
     // check sales value and calculates commission rate accordingly, using if/else loop
     
-    if (sales >15000)
+    if (sales <10000)
     {
-        rate = 0.20;
+        rate = 0.1;
     }
-    else if (sales>= 10000)
+    else if (sales>=10000 && sales<15000)
     {
         rate = 0.15;
     }
     else
     {
-        rate = 0.10;
+        rate = 0.2;
     }
     
     commission = sales * rate; // the commission is sales * rate
